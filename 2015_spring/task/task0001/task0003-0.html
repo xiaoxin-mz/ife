@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .diva,
+        .divb,
+        .divc {
+            height: 50px;
+        }
+
+        .diva {
+            background-color: red;
+            float: left;
+            width: 100px;
+        }
+
+        .divb {
+            background-color: blue;
+            float: left;
+            width: calc(100% - 100px);
+        }
+
+        .clear::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        .divc {
+            background-color: yellow;
+            border: 2px solid yellowgreen;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="clear">
+        <div class="diva">DIV-A</div>
+        <div class="divb">DIV-B</div>
+    </div>
+    <!--<div class="clear"></div>-->
+    <div class="divc">DIV-C</div>
+</body>
+
+</html>
